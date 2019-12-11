@@ -1,0 +1,11 @@
+.timer {
+    font-size: 150%;
+}
+.paused {
+    animation: blinker 1s step-start infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
