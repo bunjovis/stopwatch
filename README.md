@@ -9,7 +9,6 @@ This is a stopwatch made in HTML and Javascript mainly as practice. It supports 
   * "Stop all"
   * "Reset all"
   * "Delete all" 
-* Rewrite js/script.js to use the word stopwatch instead of timer
 
 ## Installation
 
