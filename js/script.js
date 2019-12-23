@@ -153,5 +153,4 @@ function addTimer() {
 // Function to delete timer 
 function deleteTimer(id) {
     delete timers[id];
-    timerCount--;
 }
