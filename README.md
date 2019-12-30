@@ -2,14 +2,6 @@
 
 This is a stopwatch made in HTML and Javascript mainly as practice. It supports adding multiple named stopwatches independent of each other.
 
-## TODO
-
-* More controls
-  * "Start all"
-  * "Stop all"
-  * "Reset all"
-  * "Delete all" 
-
 ## Installation
 
 Clone or download this repository. To run this app, just open index.html in browser. Works with Google Chrome and Firefox, doesn't work with Edge.
