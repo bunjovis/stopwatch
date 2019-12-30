@@ -9,6 +9,12 @@ let stopwatchCount = 0;
 // eventlistener for "Add new stopwatch"-button
 document.getElementById("addstopwatch").addEventListener("click", addStopwatch);
 
+// eventlisteners for mass controls
+document.getElementById("startall").addEventListener("click", startAll);
+document.getElementById("stopall").addEventListener("click", stopAll);
+document.getElementById("resetall").addEventListener("click", resetAll);
+document.getElementById("deleteall").addEventListener("click", deleteAll);
+
 // Stopwatch class
 class Stopwatch {
     constructor(id) {
@@ -29,7 +35,7 @@ class Stopwatch {
         this.deleteButton.addEventListener("click",this.delete);
     }
 
-    // Remove element
+    // Remove stopwatch
     delete = () => {
         // Remove stopwatch element from document 
         this.stopwatchDiv.parentElement.removeChild(this.stopwatchDiv);
@@ -149,4 +155,36 @@ function addStopwatch() {
 // Function to delete stopwatch 
 function deleteStopwatch(id) {
     delete stopwatches[id];
+}
+
+// Function to start all stopwatches
+function startAll() {
+    stopwatches.forEach((s) => {
+        if (!s.running) {
+            s.startStop();
+        }
+    });
+}
+
+// Function to stop all stopwatches
+function stopAll() {
+    stopwatches.forEach((s) => {
+        if (s.running) {
+            s.startStop();
+        }
+    });
+}
+
+// Function to reset all stopwatches
+function resetAll() {
+    stopwatches.forEach((s) => {
+        s.reset();
+    });
+}
+
+// Function to delete all stopwatches
+function deleteAll() {
+    stopwatches.forEach((s) => {
+        s.delete();
+    });
 }
